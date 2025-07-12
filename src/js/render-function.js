@@ -2,14 +2,18 @@
 import { refs } from "./refs";
 import { findCategories } from "./products-api";
 
-// export function renderProducts(products) {
-//     const markup = products.map(product => `<li class="products__item"><img src="${product.thumbnail}" alt="${product.title}" class="products__image" /><h3 class="products__title">${product.title}</h3><p class="products__brand">${product.price}</p></li>`).join("");
-    
-//     refs.productsList.innerHTML = markup;
-// }
-
-
 export function createMarkup(arr) {
     return arr.map((item) => `<li class="categories__item"><button class="categories__btn" type="button">${item}</button></li>`).join("")
+}
+
+
+export function createProducts(arr) {
+    return arr.map( item => `<li class="products__item" data-id="${item.id}">
+    <img class="products__image" src="${item.thumbnail}" alt=""/>
+    <p class="products__title">${item.title}</p>
+    <p class="products__brand"><span class="products__brand--bold">Brand:</span>${item.brand}</p>
+    <p class="products__category">Category:${item.category} </p>
+    <p class="products__price">Price:${item.price} $</p>
+ </li>` ).join("")
 }
 

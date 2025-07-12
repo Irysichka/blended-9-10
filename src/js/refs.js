@@ -7,8 +7,10 @@ export const refs = {
     END_PRODUCTS_ID: "https://dummyjson.com/products/1",
     SEARCH_PRODUCTS: "https://dummyjson.com/products/search?q=nail",
     ALL_CATEGORIES: "https://dummyjson.com/products/category-list ",
-    SEARCH_PRODUCT_ID: "https://dummyjson.com/products/category/smartphones",
+    SEARCH_PRODUCT_ID: "https://dummyjson.com/products/category",
     
     categoriesList: document.querySelector(".categories"),
-productsList: document.querySelector(".products")
+    productsList: document.querySelector(".products"),
+    notFound: document.querySelector(".not-found"),
+btnCategory: document.querySelectorAll(".categories__btn")
 };
